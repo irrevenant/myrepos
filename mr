@@ -1766,7 +1766,7 @@ sub bootstrap {
 		print STDERR "mr bootstrap: .mrconfig file already exists, not overwriting with $src\n";
 	}
 	else {
-		move($tmpconfig, ".mrconfig") || die "rename: $!";
+		move($tmpconfig->filename, ".mrconfig") || die "rename: $!";
 	}
 
 	# Reload the config file (in case we got a different version)
